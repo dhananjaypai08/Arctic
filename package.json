@@ -1,0 +1,21 @@
+{
+  "name": "evm-bridge",
+  "version": "1.0.0",
+  "description": "```sh git submodule update --init --recursive ```",
+  "main": "index.js",
+  "scripts": {
+    "start_node": "cd evm && ./local_node.sh",
+    "deploy:cosmosbridge": "cd contracts && dotenv -e .env -- sh -c 'echo $COSMOS_PRIVATE_KEY && forge script script/DeployCosmosBridge.sol:CosmosBridgeScript --rpc-url node --private-key $COSMOS_PRIVATE_KEY --broadcast --slow'",
+    "deploy:sepolia": "cd contracts && dotenv -e .env -- sh -c 'echo $PRIVATE_KEY && forge script script/DeployCosmosBridge.sol:CosmosBridgeScript --rpc-url sepolia --private-key $PRIVATE_KEY --broadcast'",
+    "deploy:base-sepolia": "cd contracts && dotenv -e .env -- sh -c 'echo $PRIVATE_KEY && forge script script/DeployCosmosBridge.sol:CosmosBridgeScript --rpc-url base_sepolia --private-key $PRIVATE_KEY --broadcast'",
+    "deploy:arbitrum-sepolia": "cd contracts && dotenv -e .env -- sh -c 'echo $PRIVATE_KEY && forge script script/DeployCosmosBridge.sol:CosmosBridgeScript --rpc-url arbitrum_sepolia --private-key $PRIVATE_KEY --broadcast'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "dotenv-cli": "^10.0.0"
+  }
+}
