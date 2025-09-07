@@ -49,8 +49,8 @@ Below are the deployed contract addresses for each supported chain. These are au
 
 | Chain Name      | Chain ID   | Contract Address                        |
 |----------------|-----------|-----------------------------------------|
-| Local/Testnet  | 262144    | 0xe2f81b30e1d47dffdbb6ab41ec5f0572705b026d |
-| Sepolia        | 11155111  | 0x03b08e291b421873b2d87c4611ceddb8b5403760 |
+| Local/Testnet  | 262144    | 0x66f0c4c9a21b78d4d92358d087176964982e1c21 |
+| Sepolia        | 11155111  | 0x18bf120e15abc83ae150a74fdd5cec9938e67c36 |
 
 
 ## For Web2 Developers

@@ -17,5 +17,9 @@
   "type": "commonjs",
   "devDependencies": {
     "dotenv-cli": "^10.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "ethers": "^6.15.0"
   }
 }
