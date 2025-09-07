@@ -22,6 +22,7 @@ This project provides a simple, production-grade interface and smart contract fo
 git submodule update --init --recursive
 cd evm && ./local_node.sh # add your own moniker, chainId, coin denom in ./local_node.sh file
 ```
+*Note*: This starts your rpc url on localhost:8545
 
 ### 1. Deploy the Bridge Contract
 Deploy the `CosmosBridge` contract to your source and destination EVM chains. You can use Foundry, Hardhat, or any EVM-compatible deployment tool.
