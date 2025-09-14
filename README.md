@@ -34,6 +34,9 @@ Deploy the `CosmosBridge` contract to your source and destination EVM chains. Yo
 ### 3. Transfer Assets
 - Call the `bridgeOut` function on the source chain to initiate a transfer.
 - The relayer will call `bridgeIn` on the destination chain to complete the transfer.
+Note : **This creates a type of your own canonical bridge via the relayer**
+The relayer architecture is a p2p based intent solver currently in progress and is being built in Rust
+Open Question : Oracle Support ?
 
 ### 4. Example Usage
 ```solidity
