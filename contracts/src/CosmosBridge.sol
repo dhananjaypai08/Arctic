@@ -7,7 +7,8 @@ import {
     NotAuthorized,
     InvalidAmount,
     TransferFailed,
-    AlreadyProcessed
+    AlreadyProcessed,
+    NoFunctionNamed
 } from "./errors/Index.sol";
 import { BridgeRequest } from "./types/Index.sol";
 
@@ -90,4 +91,12 @@ contract CosmosBridge is ICosmosBridge {
 
     /// @notice Allows the contract to receive ETH
     receive() external payable {}
+
+    fallback() external payable {
+        bytes4 selector;
+        assembly {
+            selector := calldataload(0)
+        }
+        revert NoFunctionNamed(selector);
+    }
 }
