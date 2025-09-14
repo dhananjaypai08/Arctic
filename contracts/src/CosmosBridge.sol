@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.28;
 
 import { IERC20 } from "./interfaces/IERC20.sol";
 import {ICosmosBridge} from "./interfaces/ICosmosBridge.sol";
@@ -10,7 +10,6 @@ import {
     AlreadyProcessed,
     NoFunctionNamed
 } from "./errors/Index.sol";
-import { BridgeRequest } from "./types/Index.sol";
 
 /// @author DJ
 /// @title CosmosBridge
@@ -24,7 +23,7 @@ contract CosmosBridge is ICosmosBridge {
     mapping(uint256 => bool) public processedNonces;
 
     /// @notice Special address to represent native ETH bridging
-    address constant NATIVE_TOKEN = address(0);
+    address public constant NATIVE_TOKEN = address(0);
 
     /// @notice Sets the admin to the contract deployer
     constructor() {
