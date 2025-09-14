@@ -9,6 +9,7 @@
     "deploy:sepolia": "cd contracts && dotenv -e .env -- sh -c 'echo $PRIVATE_KEY && forge script script/DeployCosmosBridge.sol:CosmosBridgeScript --rpc-url sepolia --private-key $PRIVATE_KEY --broadcast'",
     "deploy:base-sepolia": "cd contracts && dotenv -e .env -- sh -c 'echo $PRIVATE_KEY && forge script script/DeployCosmosBridge.sol:CosmosBridgeScript --rpc-url base_sepolia --private-key $PRIVATE_KEY --broadcast'",
     "deploy:arbitrum-sepolia": "cd contracts && dotenv -e .env -- sh -c 'echo $PRIVATE_KEY && forge script script/DeployCosmosBridge.sol:CosmosBridgeScript --rpc-url arbitrum_sepolia --private-key $PRIVATE_KEY --broadcast'",
+    "contracts:lint": "cd contracts && solhint 'src/**/*.sol'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
