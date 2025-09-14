@@ -42,7 +42,7 @@ if (!PRIVATE_KEY) {
       const gasPrice = await provider.getGasPrice();
       return {
         gasPrice,
-        type: 0 // legacy
+        type: 0 // legacy without EIP1559 fields
       };
     }
 
@@ -68,6 +68,7 @@ if (!PRIVATE_KEY) {
       const isNative = true; // set to false for ERC20 bridging
 
       // You can toggle between native and ERC20 bridging here
+      // Note the oracle problem for this type of canonical bridge still isn't solved here
       const token = isNative ? NATIVE_TOKEN : "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238";
       const amount = ethers.parseUnits("0.01", 18); // 0.01 ETH or 0.01 tokens
       const toChainId = dst.chainId;
