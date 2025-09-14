@@ -6,3 +6,4 @@ error NotAuthorized();
 error InvalidAmount();
 error TransferFailed();
 error AlreadyProcessed(uint256 nonce);
+error NoFunctionNamed(bytes4 selector);
